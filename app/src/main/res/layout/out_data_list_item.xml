@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView android:textSize="12sp" android:id="@+id/text0" android:layout_width="18dp" android:layout_height="wrap_content" android:layout_marginLeft="5dp"/>
+    <TextView android:textSize="14sp" android:gravity="left" android:id="@+id/text1" android:layout_width="130dp" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:maxLength="16"/>
+    <TextView android:textSize="14sp" android:gravity="left" android:id="@+id/text2" android:layout_width="110dp" android:layout_height="wrap_content" android:layout_marginLeft="5dp"/>
+    <Button android:textSize="12sp" android:id="@+id/item_copy" android:layout_width="60dp" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="复制"/>
+</LinearLayout>

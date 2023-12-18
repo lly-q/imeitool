@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="horizontal" android:id="@+id/bt_area" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <RelativeLayout android:id="@+id/info_area" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_below="@+id/bt_area">
+        <LinearLayout android:id="@+id/tv1" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:layout_width="100dp" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="当前串号1："/>
+            <TextView android:id="@+id/tv_imei1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/tv2" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/tv1">
+            <TextView android:layout_width="100dp" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="当前串号2："/>
+            <TextView android:id="@+id/tv_imei2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/tv3" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_below="@+id/tv2">
+            <TextView android:layout_width="100dp" android:layout_height="wrap_content" android:text="sim卡IMSI："/>
+            <TextView android:id="@+id/tv_imsi" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_below="@+id/tv3">
+            <TextView android:layout_width="100dp" android:layout_height="wrap_content" android:text="新串号："/>
+            <EditText android:id="@+id/tv_new_imei" android:layout_width="220dp" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:hint="产生新的imei" android:maxLength="15"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout android:orientation="horizontal" android:id="@+id/work_area" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/info_area">
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp">
+            <Button android:id="@+id/create_random" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="随机生成"/>
+            <Button android:id="@+id/out_nume" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="外部串号"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="123dp">
+            <Button android:id="@+id/write_nume" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="写入串码"/>
+            <Button android:id="@+id/bak_write" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="备份写入"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="225dp">
+            <Button android:id="@+id/select_imsi" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="匹配串号"/>
+            <Button android:id="@+id/open_appx" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="打开APP"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@+id/list_area" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/work_area">
+        <ListView android:id="@+id/out_data_list" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp"/>
+        <ListView android:id="@+id/select_data_list" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp"/>
+    </LinearLayout>
+</RelativeLayout>
